@@ -1,0 +1,29 @@
+<div class="toolbar" role="banner">
+  <div class="loglft"></div>
+  <span (click)="logout()">
+    <img class="marginauto" width="150" alt="centered image" src="/assets/images/mcbgroup.jpeg">
+  </span>
+  <div class="spacing"></div>
+  <span style="cursor: pointer;" (click)="logout()">
+    <img class="marginauto" width="30" alt="centered image" src="/assets/images/logoutNew.png">Logout
+  </span>
+  <div class="logBtn"></div>
+</div>
+
+<div class="content mtop5" role="main">
+  <input type="hidden" #selection>
+  <div class="card-container mtop2">
+    <div class="card" routerLink="/new-transaction">
+      <img class="marginauto" width="70" alt="centered image" src="assets/images/viewImg.png" /> 
+      <h3>&nbsp;New Transaction</h3>
+    </div>
+
+    <div class="card m" routerLink="/old-transaction">
+      <span>
+        <img class="marginauto" width="70" alt="centered image" src="/assets/images/AllImg.jpeg">
+      </span>
+      <h3>&nbsp;View Submitted<br>&nbsp;Transactions</h3>
+    </div>
+  </div>
+
+</div>

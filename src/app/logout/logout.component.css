@@ -1,0 +1,60 @@
+.login100-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 60px;
+    height: 32px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #ffffff !important;
+    background: #da2222;
+    line-height: 1.2;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  .btn-no {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 60px;
+    height: 32px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #ffffff !important;
+    background: #000000;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  .login100-form-btn:hover {
+    background-color: #bb192e;
+    color: white;
+  }
+  .login100-form-btn a {
+    color: white !important;
+  }
+  .logout{
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif !important;
+    color: #000000;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+ .reset{
+    margin-left: 5%
+}

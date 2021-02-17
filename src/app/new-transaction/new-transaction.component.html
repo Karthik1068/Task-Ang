@@ -1,0 +1,134 @@
+<div class="toolbar" role="banner">
+    <div class="loglft"></div>
+    <span (click)="logout()">
+        <img class="marginauto" width="150" alt="centered image" src="/assets/images/mcbgroup.jpeg">
+    </span>
+    <div class="spacing"></div>
+    <span style="cursor: pointer;" (click)="logout()">
+        <img class="marginauto" width="30" alt="centered image" src="/assets/images/logoutNew.png">Logout
+    </span>
+    <div class="logBtn"></div>
+</div>
+
+<div class="container transHead box-shadow mtop2">
+    <h4 class="txtAlignCenter boldfw"> Transaction Details </h4>
+    <form id="transForm" [formGroup]="transForm" class="login-form">
+        <div class="container clsForm" formGroupName="newTransaction">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <mat-form-field appearance="outline" class="input-100">
+                        <mat-label>Reference</mat-label>
+                        <input class="input-100" formControlName="reference" matInput autocomplete="off" maxlength="15">
+                        <span matPrefix>CUS</span>
+                    </mat-form-field>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <mat-form-field appearance="outline" class="input-100">
+                        <mat-label>Customer Number</mat-label>
+                        <input class="input-100" matInput numbers-only formControlName="customerNo" autocomplete="off"
+                            (keydown.enter)="$event.preventDefault()" (input)="getCustomerData($event.target.value)"
+                            maxlength="5">
+                    </mat-form-field>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <mat-form-field appearance="outline" class="input-100">
+                        <mat-label>Customer Name</mat-label>
+                        <input class="input-100" matInput formControlName="customerName" autocomplete="off">
+                    </mat-form-field>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <mat-form-field appearance="outline" class="input-100">
+                        <mat-label>Customer Phone No</mat-label>
+                        <input class="input-100 phoneNo" matInput autocomplete="off" formControlName="phone"
+                            numbers-only maxlength="15">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <mat-form-field appearance="outline" class="input-100">
+                        <mat-label>Customer Address</mat-label>
+                        <input class="input-100" matInput formControlName="address" autocomplete="off">
+                    </mat-form-field>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <mat-form-field appearance="outline" class="input-100">
+                        <mat-label>Transfer Amount</mat-label>
+                        <input class="input-100 transferAmt" numbers-only matInput formControlName="transferAmt"
+                            autocomplete="off">
+
+                    </mat-form-field>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <mat-form-field appearance="outline" class="input-100">
+                        <mat-label>Transfer Currency</mat-label>
+                        <mat-select formControlName="transferCurrency" autocomplete="off" name="transferCurrency">
+                            <mat-option *ngFor="let currency of currencyList" [value]="currency">
+                                {{currency}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <mat-form-field appearance="outline" class="input-100">
+                        <mat-label>Beneficiary Bank</mat-label>
+                        <input class="input-100" text-only matInput autocomplete="off" formControlName="beneficiaryBank"
+                            only-alphabets>
+                    </mat-form-field>
+                </div>
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <mat-form-field appearance="outline" class="input-100">
+                        <mat-label>Beneficiary Account No</mat-label>
+                        <input class="input-100" numbers-only matInput autocomplete="off"
+                            formControlName="beneficiaryAcno" maxlength="12">
+                    </mat-form-field>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <mat-form-field appearance="outline" class="input-100">
+                        <mat-label>Payment Details</mat-label>
+                        <input class="input-100" matInput text-only autocomplete="off" formControlName="paymentDetails">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="button-container webshow">
+                <div class="submit-btn">
+                    <button type="submit" class="form-submit cancel" (click)="back()">
+                        Back
+                    </button>
+                    <button type="submit" class="form-submit" (click)="submitData()">
+                        Submit
+                    </button>
+                    <button class="form-submit cancel" (click)="cancelData()">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+
+            <div class="row col-xl-12 col-lg-12 col-md-12 col-sm-12 mobshow">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <button type="submit" class="form-submit cancel" (click)="back()">
+                        Back
+                    </button>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <button type="submit" class="form-submit cancel" (click)="submitData()">
+                        Submit
+                    </button>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <button class="form-submit cancel" (click)="cancelData()">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+        <br>
+    </form>
+</div>

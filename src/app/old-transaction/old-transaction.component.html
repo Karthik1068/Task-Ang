@@ -1,0 +1,48 @@
+<div class="toolbar" role="banner">
+    <div class="loglft"></div>
+    <span (click)="logout()">
+      <img class="marginauto" width="150" alt="centered image" src="/assets/images/mcbgroup.jpeg">
+    </span>
+    <div class="spacing"></div>
+    <span style="cursor: pointer;" (click)="logout()">
+      <img class="marginauto" width="30" alt="centered image" src="/assets/images/logoutNew.png">Logout
+    </span>
+    <div class="logBtn"></div>
+  </div>
+
+<div class="wrapView">
+    <div class="container transHead box-shadow">
+        <h4 class="txtAlignCenter boldfw"> All Transaction Details </h4>
+        <div class="mat-card-view mtop2">
+            <div class="fieldClr"></div>
+            <ng-container>
+                <div class="allTransTable">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Customer Name</th>
+                                <th>Transfer Amount</th>
+                                <th>Transfer Currency</th>
+                                <th>Reference</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let transaction of newTransactionlist">
+                                <td>{{transaction.cusNumber}}</td>
+                                <td>{{transaction.amount}}</td>
+                                <td>{{transaction.currency}}</td>
+                                <td>{{transaction.referenceNo}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </ng-container>
+
+            <button type="submit" class="form-submit cancel" (click)="back()">
+                Back
+            </button>
+        </div>
+
+    </div>
+</div>

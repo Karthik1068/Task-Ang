@@ -1,0 +1,28 @@
+{
+   "customers": [
+      {
+         "custNo": "12345",
+         "customerName": "KEVIN",
+         "country": "USA",
+         "address": "1ST STREET",
+         "city": "LOS VEGAS",
+         "phone": "9944558877"
+      },
+      {
+         "custNo": "23456",
+         "customerName": "RAM",
+         "country": "INDIA",
+         "address": "STREET NO 33",
+         "city": "DELHI",
+         "phone": "8098652134"
+      },
+      {
+         "custNo": "34567",
+         "customerName": "ABDUL",
+         "country": "PAKISTAN",
+         "address": "PARK STREET 47",
+         "city": "LAHORE",
+         "phone": "8745632189"
+      }
+   ]
+}

@@ -1,0 +1,54 @@
+.box-shadow {
+    background-color: #FFFFFF;
+    padding: 8px;
+    border: solid 1px lightgrey;
+}
+.clsForm{
+    margin-top: 5%;
+}
+.input-100 {
+    width: 98%;
+    color: black
+  }
+  .submit-btn {
+    position: relative;
+    z-index: 10;
+    display: flex;
+  }
+.button-container {
+  float: right;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.cancel {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+  input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+.mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: 0.8em 0 1em 0 !important;
+}
+.mobshow {
+  display: none;
+}
+.webshow {
+  display: block;
+}
+
+@media screen and (max-width: 750px) {
+  .mobshow {
+    display: block;
+  }
+  .webshow {
+    display: none;
+  }
+  .form-submit {
+    height: 36px;
+    margin: 8px;
+    align-items: center !important;
+    text-align: center !important;
+  }
+}

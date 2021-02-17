@@ -1,0 +1,70 @@
+<!-- <nav>
+  <a routerLink="/home">Home Component</a>
+</nav>
+<router-outlet></router-outlet> -->
+
+
+<div class="col-md-12 loginbg fontsFam">
+  <div class="row h-100 align-items-center" style="overflow: hidden;">
+    <div class="col-lg-5 col-md-12 mx-auto">
+      <div class="row row-eq-height login-wrapper">
+        <div class="col-lg-6 col-md-12 col-xs-12 login-left p-5 text-center show_hide webdevice">
+
+          <div class="col-md-12 col-xs-12 align-self-center pad1R">
+            <div class="mtmid">
+              <img class="marginauto" alt="centered image" src="/assets/images/mcb-01.png">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-6 col-md-12 col-xs-12 login-right p-5">
+          <div class="row h-100 fontFam pad1R">
+            <div class="col-md-12 col-lg-12 col-xs-12 mtop5">
+            
+              <h2 class="signinCss">LOG IN</h2>
+              <form class="my-5 mtop2" [formGroup]="mcblogin">
+
+                <div class="form-group">
+                  <span class="fontFam">USER ID</span>
+                  <input name="userId" appBlockCopyPaste type="text" formControlName="userId" autocomplete="off">
+                </div>
+                <div class="validation-errors">
+                  <ng-container *ngFor="let validation of validation_messages.userId">
+                    <div
+                      *ngIf="mcblogin.get('userId').hasError(validation.type) && (mcblogin.get('userId').dirty || mcblogin.get('userId').touched)"
+                      class="error-msg">
+                      {{ validation.message }}
+                    </div>
+                  </ng-container>
+                </div> 
+               
+                <div class="form-group">
+                  <span class="fontFam">PASSWORD</span>
+                  <input name="password" appBlockCopyPaste autocomplete="off" [type]="hide ? 'password' : 'text'" minlength="1" maxlength="15" formControlName="password">
+                  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </div>
+                <div class="validation-errors">
+                  <ng-container *ngFor="let validation of validation_messages.password">
+                    <div
+                      *ngIf="mcblogin.get('password').hasError(validation.type) && (mcblogin.get('password').dirty || mcblogin.get('password').touched)"
+                      class="error-msg">
+                      {{ validation.message }}
+                    </div>
+                  </ng-container>
+                </div>
+
+                <div class="container-btn top3">
+                  <button class="login100-form-btn" type="Submit" [disabled]="mcblogin.invalid" value="Submit"
+                    (click)="login()"> Log In </button>
+                </div>
+
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

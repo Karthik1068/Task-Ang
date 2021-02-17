@@ -1,0 +1,86 @@
+.wrapView{
+    margin: 0px 0px 0px 0px;
+    padding: 16px 0px 0px 0px;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+.box-shadow {
+    background-color: #FFFFFF;
+    padding: 8px;
+    border: solid 1px lightgrey;
+}
+.title1 {
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px 0px 16px 0px;
+    font-weight: 500;
+    display: inline-block;
+}
+.fieldClr{
+    margin: 0px;
+    padding: 0px;
+    clear: both;
+}
+.allTransTable{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-height: 300px;
+    display: block;
+}
+.heading{
+    font-weight: bold;
+ }
+ div.view-icon-div{
+     width: 30px;
+     height: 40px;
+ }
+ div.edit-icon-div{
+     width: 30px;
+     height: 40px;
+ }
+ div.more-icon-div{
+     width: 30px;
+     height: 40px;
+ }
+
+ @media (max-width: 1024px) {
+     .mobile-view-list-section {
+         display: block;
+     }
+     .list-table {
+         display: none;
+     }
+ }
+ .table-content th {
+     padding-right: 20px;
+     font-size: 14px;
+ }
+ .table-content td {
+     padding-right: 20px;
+     padding-bottom: 10px;
+     padding-top: 10px;
+ }
+
+ mat-form-field {
+     min-width: 100%;
+ }
+
+ @media (max-width: 700px){
+    .allTransTable thead tr th {
+        font-size: 14px !important;
+    }
+    .allTransTable tbody tr td {
+        font-size: 12px;
+    }
+    .box-shadow {
+        border: none !important;
+    }
+ }
+ 
+
+
+
+
+
